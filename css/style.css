@@ -1,0 +1,129 @@
+:root {
+  --kleur-achtergrond: #f1f5f9;
+  --kleur-tekst: #0f172a;
+  --kleur-accent: #38bdf8;
+  --kleur-accent-donker: #0284c7;
+  --kleur-wit: #ffffff;
+  --kleur-blog: #334155;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: var(--kleur-achtergrond);
+  color: var(--kleur-tekst);
+  line-height: 1.7;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--kleur-tekst);
+  color: var(--kleur-wit);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: var(--kleur-wit);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--kleur-accent);
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: var(--kleur-wit);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.1);
+}
+
+h2 {
+  color: var(--kleur-accent-donker);
+  margin-bottom: 1rem;
+}
+
+.over-knop,
+.project-knop {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--kleur-accent);
+  color: var(--kleur-tekst);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.over-knop:hover,
+.project-knop:hover {
+  background-color: var(--kleur-accent-donker);
+  color: var(--kleur-wit);
+}
+
+.projecten-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.project {
+  background-color: var(--kleur-achtergrond);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--kleur-accent);
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--kleur-tekst);
+  color: var(--kleur-wit);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
